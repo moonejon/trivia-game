@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: black;
+  background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -11,18 +11,22 @@ body {
   box-align: center;
 }
 
+img {
+  margin: 20px;
+}
+
 .container {
   margin-top: -60px;
 }
 
 .jumbotron {
-  background-color: black;
-  color: whitesmoke;
+  background-color: white;
+  color: black;
   font-weight: bold;
 }
 
 .card {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   font-weight: bold;
 }
