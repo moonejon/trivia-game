@@ -1,0 +1,28 @@
+html,
+body {
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logo {
+  box-align: center;
+}
+
+.container {
+  margin-top: -60px;
+}
+
+.jumbotron {
+  background-color: black;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
