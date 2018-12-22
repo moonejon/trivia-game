@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: white;
+  background-color: #003865;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,12 +16,13 @@ img {
 }
 
 .container {
-  margin-top: -60px;
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 .jumbotron {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   font-weight: bold;
 }
 
