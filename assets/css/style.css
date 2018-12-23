@@ -33,3 +33,8 @@ img {
   margin-right: auto;
   margin-bottom: 20px;
 }
+
+#questionsList {
+  padding-left: 20px;
+  padding-right: 20px;
+}
