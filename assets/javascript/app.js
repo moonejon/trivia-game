@@ -1,49 +1,92 @@
-let trivia1 = {
-  question: "What is the name of the Doctor's home planet?",
-  answers: ["Trenzalore", "Mars", "Gallifrey", "Skaro"],
-  correctAnswer: [2]
-};
+let correctAnswers = 0;
+let incorrectAnswers = 0;
 
-let trivia2 = {
-  question: "What actress played the character of Rose Tyler?",
-  answers: [
-    "Billie Piper",
-    "Keira Knightley",
-    "Emma Thompson",
-    "Kylie Minogue"
-  ],
-  correctAnswer: [0]
-};
+$("#answer_1_true").click(function() {
+  $("#answer_1_false").hide();
+  correctAnswers++;
+});
+$("#answer_1_false").click(function() {
+  $("#answer_1_true").hide();
+  incorrectAnswers++;
+});
+$("#answer_2_false").click(function() {
+  $("#answer_2_true").hide();
+  correctAnswers++;
+});
+$("#answer_2_true").click(function() {
+  $("#answer_2_false").hide();
+  incorrectAnswers++;
+});
+$("#answer_3_false").click(function() {
+  $("#answer_3_true").hide();
+  incorrectAnswers++;
+});
+$("#answer_3_true").click(function() {
+  $("#answer_3_false").hide();
+  correctAnswers++;
+});
+$("#answer_4_false").click(function() {
+  $("#answer_4_true").hide();
+  incorrectAnswers++;
+});
+$("#answer_4_true").click(function() {
+  $("#answer_4_false").hide();
+  correctAnswers++;
+});
+$("#answer_5_false").click(function() {
+  $("#answer_5_true").hide();
+  correctAnswers++;
+});
+$("#answer_5_true").click(function() {
+  $("#answer_5_false").hide();
+  incorrectAnswers++;
+});
+$("#answer_6_false").click(function() {
+  $("#answer_6_true").hide();
+  incorrectAnswers++;
+});
+$("#answer_6_true").click(function() {
+  $("#answer_6_false").hide();
+  correctAnswers++;
+});
 
-let triviaQuestions = [trivia1, trivia2];
-
-function generateQuestionCards() {
-  for (i = 0; i < triviaQuestions.length; i++) {
-    var questionsList = document.getElementById("questionsList");
-    var card = document.createElement("div");
-    card.className = "card w-50";
-    var cardBody = document.createElement("div");
-    cardBody.className = "card-body";
-    var cardHeader = document.createElement("h4");
-    cardHeader.className = "card-title";
-    cardHeader.innerText = triviaQuestions[i].question;
-    var cardFormDiv = document.createElement("div");
-    questionsList.appendChild(card);
-    card.appendChild(cardBody);
-    cardBody.appendChild(cardHeader);
-    for (j = 0; j < triviaQuestions[i].answers.length; j++) {
-      cardFormDiv.className = "form-check";
-      cardBody.appendChild(cardFormDiv);
-      var formInputRow = document.createElement("div");
-      var formInput = document.createElement("input");
-      formInput.className = "form-check-input";
-      formInput.type = "radio";
-      formInput.name = "Answer " + triviaQuestions[i].answers.indexOf;
-      cardFormDiv.appendChild(formInputRow);
-      formInputRow.appendChild(formInput);
-    }
+function showQuestions() {
+  var questions = document.getElementById("questionsList");
+  if (questions.style.display === "none") {
+    questions.style.display = "block";
+  } else {
+    questions.style.display = "none";
   }
-  //   document.body.appendChild(questionsList);
+
+  var start = document.getElementById("start");
+  start.style.display = "none";
+
+  var submit = document.getElementById("submit");
+  submit.style.visibility = true;
+
+  startTimer = setTimeout(function() {
+    initialTimer();
+  }, 0);
+
+  timer = setTimeout(function() {
+    timesUp();
+  }, 45000);
+
+  function initialTimer() {
+    document.querySelector("#time-left").innerHTML =
+      "<h2>You have 45 seconds! Go!</h2>";
+  }
+  function timesUp() {
+    document.querySelector("#time-left").innerHTML =
+      "<h2>You ran out of time!</h2><p>Refresh the page to try again!</p>";
+  }
 }
 
-generateQuestionCards();
+function submitAction() {
+  window.clearTimeout(timer);
+  document.querySelector("#time-left").innerHTML =
+    "You guessed " +
+    correctAnswers +
+    "/" +
+    "6 questions correctly! Refresh the page to try again!";
+}

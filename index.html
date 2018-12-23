@@ -22,39 +22,102 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
       <img src="assets/images/logo.png" alt="" />
-      <p><button type="button" class="btn btn-primary-black">Start</button></p>
+      <p id="time-left"><button type="button" id="start" onclick="showQuestions()" class="btn btn-primary-black">Start</button></p>
+      <p id="submit"><button type="button" id="submitBtn" style="visibility: false" onclick="submitAction()" class="btn btn-primary-blue">Submit</button></p>
     </div>
   </div>
   <body>
-    <div id="questionsList">
-      <!-- <div class="card w-50">
-        <div class="card-body">
-          <h4 class="card-title">Title</h4>
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="exampleRadios"
-              id="exampleRadios1"
-              value="option1"
-              checked
-            />
-            <label class="form-check-label" for="exampleRadios1">
-              Default radio
-            </label> -->
+    <div id="questionsList" style="display: none">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Question 1</h5>
+              <p class="card-text">
+                The name of the Doctor's home planet is Gallifrey.
+              </p>
+              <a href="#" class="btn btn-primary" id="answer_1_true">True</a>
+              <a href="#" class="btn btn-primary" id="answer_1_false">False</a>
+            </div>
           </div>
         </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Question 2</h5>
+              <p class="card-text">
+                David Tennant, who played the Tenth Doctor, used his natural
+                Scottish accent in the show.
+              </p>
+              <a href="#" class="btn btn-primary" id="answer_2_true">True</a>
+              <a href="#" class="btn btn-primary" id="answer_2_false">False</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Question 3</h5>
+              <p class="card-text">
+                Peter Davison, who played the Fifth Doctor, is David Tennant's
+                father-in-law.
+              </p>
+              <a href="#" class="btn btn-primary" id="answer_3_true">True</a>
+              <a href="#" class="btn btn-primary" id="answer_3_false">False</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Question 4</h5>
+              <p class="card-text">Doctor Who first aired in 1963.</p>
+              <a href="#" class="btn btn-primary" id="answer_4_true">True</a>
+              <a href="#" class="btn btn-primary" id="answer_4_false">False</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Question 5</h5>
+              <p class="card-text">
+                Doctor Who and Star Trek aired a crossover episode once in 1995.
+              </p>
+              <a href="#" class="btn btn-primary" id="answer_5_true">True</a>
+              <a href="#" class="btn btn-primary" id="answer_5_false">False</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Question 6</h5>
+              <p class="card-text">
+                The Doctor has a grand-daughter named Susan, who traveled with
+                him through time and space.
+              </p>
+              <a href="#" class="btn btn-primary" id="answer_6_true">True</a>
+              <a href="#" class="btn btn-primary" id="answer_6_false">False</a>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
